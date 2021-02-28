@@ -1,0 +1,212 @@
+.page {
+  min-width: 1100px;
+  /* мы ещё не умеем делать мобильную версию сайта, */
+  /* поэтому выше установлена минимальная ширина страницы */
+  max-width: 1600px;
+  /* выше установили ограничение по максимальной ширине */
+  margin: 0 auto;
+  /* выше для экранов больше 1600px отцентрировали весь контент */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.header {
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  /* выше установили ограничения для секции */
+}
+
+.header-logo {
+  width: 183px;
+  height: 32px;
+  margin-top: 30px;
+  margin-left: 64px;
+  line-height: 96px;
+  font-size: 102px;
+  background-position: left top;
+  position: fixed;
+  font-weight: 700;
+}
+
+.header_title {
+  background-position: left center;
+  width: 730px;
+  margin-left: 64px;
+  flex-direction: row;
+  align-self: center;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: 700;
+}
+
+.header_subtitle {
+  position: absolute;
+  width: 388px;
+  margin-bottom: 30px;
+  margin-left: 64px;
+  line-height: 25px;
+  font-size: 18px;
+  font-style: normal;
+}
+.header-image {
+  position: absolute;
+  width: 765px;
+  height: 608px;
+  background-position: right bottom;
+}
+.header-color {
+  position: absolute;
+  color: blue;
+  width: 568px;
+  height: 568px;
+  margin-top: 64px;
+  background-position: right top;
+}
+
+
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__square-pic {
+  height: 568px;
+  width: 568px;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+}
+
+.content{
+
+}
+
+.description {
+  margin-bottom:100px;
+  margin-top:100px;
+  width:80%;
+  min-width:784px;
+
+}
+
+.two-columns{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.brief{
+ width:175px;
+background-position:left top;
+line-height:1.2;
+font-size:18px;
+font-weight:normal;
+}
+.main_text {
+
+}
+.paragraph_4 {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom:30px;
+}
+.paragraph_5 {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.paragraph_6 {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+.digits{
+margin-top:100px;
+margin-bottom:100px;
+}
+.section-title{
+ margin-bottom:20px;
+}
+.section-subtitle{
+
+}
+.table{
+ margin-left:auto;
+ margin-right:auto;
+ width:1100px;
+}
+.table-cell{
+ width:250px;
+}
+
+
+
+
+
+.feynman{
+ margin-top:100px;
+ margin-bottom:90px;
+ justify-content:center;
+ 
+}
+.feynman-title {
+  width: 648px;
+  margin-bottom: 70px;
+  line-height: 1.15;
+  font-size: 120px;
+  vertical-align: top;
+  text-align: center;
+  
+}
+.feynman-subtitle {
+  margin-top: 70px;
+  line-height: 51px;
+  font-size: 36px;
+  vertical-align: middle;
+}
+.feynman-link {
+  margin-right: 48px;
+  line-height: 51px;
+  font-size:36px;
+  top:50%;
+  float:right;
+}
+.feynman-image {
+  background-position: left bottom;
+  width: 867px;
+  height: 637px;
+}
+
+
+
+
+
+
+.kaufman {
+ padding: 90px 0px;
+ background-color: black;
+
+}
+.kaufman-section-title{
+
+}
+.kaufman-section-subtitle{
+
+}
+.kaufman-table{
+
+}
+
+
+
+
+
+.footer {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  min-height: 350px;
+  width: 90%;
+  background-color: black;
+}
