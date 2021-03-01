@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\images",
     "\\styles"
   ],
-  "SelectedNode": "\\texts.md",
+  "SelectedNode": "\\styles\\style.css",
   "PreviewInSolutionExplorer": false
 }
