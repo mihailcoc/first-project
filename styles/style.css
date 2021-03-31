@@ -10,27 +10,22 @@
 }
 
 .header {
-  border: 1px solid blue;
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
   height: 100vh;
   margin-bottom: 100px;
   position:relative;
-
   display:flex;
   flex-direction:row;
 }
 
-
-.header-logo {
+.header_logo {
   width: 183px;
   height: 32px;
   position: absolute;
-  border: 1px solid red;
-  position: absolute;
-  top:30px;
-  left:64px;
+  top: 30px;
+  left: 64px;
 }
 
 .header_title {
@@ -38,48 +33,43 @@
   font-size: 102px;
   font-weight: bold;
   line-height: 96px;
-  border: 1px solid blue;
   display: flex;
   align-items: center;
   margin-left: 64px;
-  margin-top:auto;
-  margin-bottom:auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 4;
 }
 
 .header_subtitle {
   width: 388px;
   font-size: 18px;
   line-height: 25px;
-  border: 1px solid blue;
+  font-weight: normal;
   position: absolute;
   bottom: 30px;
-  left:64px;
+  left: 64px;
+  z-index: 4;
 }
 
-
-
-.header-image {
+.header_image {
   position: absolute;
   right: 0px;
   bottom: 0px;
   width: 765px;
   height: 608px;
-  border: 1px solid aqua;
-  
   z-index: 3;
 }
-.header-color {
+.header_color {
   width: 565px;
   height: 568px;
-  border: 1px solid blue;
   position: absolute;
   right: 0px;
   top: 64px;
   z-index: 2;
-  background-color: blue;
+  background-color:blue;
 }
 .header_link{
-
 }
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
@@ -87,13 +77,7 @@
   width: 568px;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
+
 
 .content{
 
@@ -105,52 +89,56 @@
   flex-direction: row;
   width: 80%;
   min-width: 784px;
-  padding:0px 0px;
-  margin-bottom:100px;
+  padding: 0px 0px;
+  margin-bottom: 100px;
 }
 .two-columns {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid red;
 }
-.brief {
-  border: 1px solid pink;
+.two-columns__brief {
   width: 175px;
   background-position: left top;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-decoration: none;
+  color: blue;
 }
-.main_text {
+.two-columns__maintext {
   width: 80%;
   min-width: 784px;
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-position: right;
 }
-.paragraph_4 {
-  border: 1px solid pink;
+.two-columns__maintext_paragraph4 {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.two-columns__maintext_paragraph5 {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
-.paragraph_5 {
-  border: 1px solid pink;
-  line-height: 34px;
-  font-size: 24px;
+.two-columns__span-accent {
   font-weight: 700;
-  margin-bottom: 30px;
 }
-.paragraph_6 {
-  border: 1px solid pink;
+.two-columns__maintext_paragraph6 {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 
@@ -161,13 +149,15 @@
 .digits {
   margin-top: 100px;
   margin-bottom: 100px;
+  padding-top:100px;
+  padding-bottom:100px;
   margin:auto;
   display:flex;
   flex-direction:column;
 }
-.section-title {
-  border: 1px solid red;
+.digits__title {
   margin-bottom: 20px;
+  margin-top:0px;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -176,18 +166,18 @@
   font-size: 60px;
   font-weight: 700;
 }
-.section-subtitle {
-  border: 1px solid red;
+.digits__subtitle {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom:0px;
+  margin-top:0px;
   text-align: center;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
-.table {
-  border: 1px solid red;
+.digits__table {
   margin-left: auto;
   margin-right: auto;
   width: 1100px;
@@ -196,38 +186,37 @@
   align-content: flex-start;
   flex-wrap: wrap;
   justify-content: space-between;
-  
 }
-.table-cell {
+.digits__table_cell {
   margin-top: 60px;
-  border: 1px solid red;
   width: 250px;
-  display:flex;
-  flex-direction:column;
-  align-content:flex-start;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 }
-.table-cell_top {
+.digits__table_celltop {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 700;
   background-position: top;
-  border: 1px solid red;
+  margin-top:0px;
+  margin-bottom:20px;
 }
-.table-cell_middle {
-  margin-top: 20px;
+.digits__table_cellmiddle {
+  margin-top: 0px;
+  margin-bottom:20px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   background-position: center;
-  border: 1px solid red;
-  flex-grow:1;
+  flex-grow: 1;
 }
-.table-cell_bottom {
+.digits__table_cellbottom {
   margin-top: 20px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  border: 1px solid red;
+  margin-bottom:0px;
 }
 
 
@@ -235,7 +224,6 @@
 
 
 .feynman {
-  border: 1px solid red;
   margin-top: 100px;
   justify-content: center;
   padding-top:100px;
@@ -243,9 +231,8 @@
   height:790px;
   position:relative;
 }
-.feynman-title {
+.feynman__title {
   margin-top:100px;
-  border: 1px solid red;
   width: 648px;
   margin: auto;
   line-height: 1.15;
@@ -254,74 +241,89 @@
   text-align: center;
   align-self: center;
 }
-.feynman-block {
-  border: 1px solid red;
-  width: 648px;
-  height: 70px;
-  margin-top:0px;
-  margin-bottom:0px;
-}
-.feynman-subtitle {
-  border: 1px solid red;
+.feynman__subtitle {
   line-height: 51px;
   font-size: 36px;
   vertical-align: top;
   text-align: center;
   align-self: center;
   margin: auto;
+  margin-top: 70px;
 }
-.feynman-link {
-  border: 1px solid red;
+.feynman__link {
   right: 48px;
   line-height: 51px;
   font-size: 36px;
   position: absolute;
   top:50%;
 }
-.feynman-image {
+.feynman__image {
   background-position: left bottom;
   bottom:0px;
   left:0px;
-  border: 1px solid red;
   width: 867px;
   height: 637px;
   z-index: -1;
   position:absolute;
 }
-
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+  background-color: black;
+}
 
 
 .kaufman {
   padding-top: 90px;
   padding-bottom: 90px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
   background-color: black;
 }
-.kaufman-section-title {
-  border: 1px solid red;
+.kaufman__triangle {
+  height: 877px;
+  width: 877px;
+  position: absolute;
+  top: 0px;
+  right: -210px;
+  padding-bottom: 90px;
+  background-color: black;
+  background-image: url(../images/kaufman-triangle.svg);
+}
+.kaufman__title {
   color: white;
-  margin-bottom: 20px;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom:0px;
+  margin-top:0px;
   text-align: center;
   line-height: 1.15;
   font-size: 60px;
+  font-weight: 700;
+  z-index: 2;
 }
-.kaufman-section-subtitle {
-  border: 1px solid red;
+.kaufman__subtitle {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom:0px;
+  margin-top:20px;
   text-align: center;
   color: white;
   line-height: 34px;
   font-size: 24px;
+  font-weight: normal;
+  z-index: 2;
 }
-.kaufman-table {
-  border: 1px solid red;
+.kaufman__table {
   margin-left: auto;
   margin-right: auto;
   width: 1100px;
@@ -330,29 +332,37 @@
   align-content: flex-start;
   flex-wrap: wrap;
   justify-content: space-between;
+  z-index: 2;
 }
-.kaufman-table-cell {
+.kaufman__table_cell {
   margin-top: 80px;
-  margin-right: 0;
-  border: 1px solid blue;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
   width: 200px;
   color: white;
-  padding:0px;
-  display:flex;
-  flex-direction:column;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  z-index: 2;
+  list-style: none;
 }
-.kaufman-table-cell_number {
+.kaufman__table_cellnumber {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 700;
+  z-index: 2;
+  margin-top: 0px;
   margin-bottom: 20px;
-  border: 1px solid blue;
 }
-.kaufman-table-cell_text {
+.kaufman__table_celltext {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  border: 1px solid blue;
+  z-index: 2;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 
@@ -366,12 +376,9 @@
   width: 90%;
   background-color: black;
   color: white;
-  min-height: 350px;
   box-sizing: border-box;
-  width: 90%;
-  border: 1px solid blue;
 }
-.footer-columns {
+.footer__columns {
   width: 90%;
   height: 100%;
   margin-left: auto;
@@ -379,142 +386,136 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid blue;
-  height: 250px;
 }
-.footer-column-first {
-  border: 1px solid red;
+.footer__column_content {
   display: flex;
   flex-basis: 711px;
   background-position: left;
   flex-direction: column;
   background-color: black;
 }
-.logo-place_footer {
+.logo_place_footer {
   width: 183px;
   height: 35px;
   background-size: contain;
   background-repeat: no-repeat;
-  border: 1px solid red;
   background-position: top left;
   margin-bottom:143px;
 }
-.footer_author {
+.footer__author {
   background-position: bottom left;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
   margin-top: 18px;
   margin-bottom: 18px;
-  border: 1px solid red;
 }
-.footer-column-second {
-  border: 1px solid red;
+.footer__column_heading {
   display: flex;
   flex-direction: column;
 }
-.footer-column_heading {
+.footer__column_headingname {
   margin-bottom: 20px;
   line-height: 30px;
   font-size: 18px;
   font-weight: 700;
 }
-.footer-column_headinglinks {
-  border: 1px solid red;
+.footer__column_headinglinks {
   display: flex;
   flex-direction: column;
 }
-.footer-column_heading__main {
+.footer__column_heading_main {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   margin-bottom: 10px;
 }
-.footer-column_heading__conception {
+.footer__column_heading_conception {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   margin-bottom: 10px;
 }
-.footer-column_heading__mentors {
+.footer__column_heading_mentors {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   margin-bottom: 16px;
 }
-.footer-column-third {
+.footer__column_links {
   display: flex;
   flex-direction: column;
   background-position: right;
-  border: 1px solid red;
 }
-.footer-column_links {
+.footer__column_linksname {
   margin-bottom: 20px;
   line-height: 30px;
   font-size: 18px;
   font-weight: 700;
 }
-.footer-column_sociallinks {
-  border: 1px solid red;
+.footer__column_sociallinks {
   display: flex;
   flex-direction: column;
 }
-.footer-column_links__facebook {
+.footer__column_links_facebook {
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
 }
-.footer-column_links__facebooklogo {
+.footer__column_links_facebooklogo {
   width: 16px;
   height: 16px;
   margin-right: 10px;
   background-size: contain;
   background-position: center;
-  border: 1px solid red;
   align-self: center;
 }
-.footer-column_links__facebooktext {
+.footer__column_links_facebooktext {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  text-decoration: none;
+  color: white;
 }
-.footer-column_links__vcontakte {
+.footer__column_links_vcontakte {
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
 }
-.footer-column_links__vcontaktelogo {
+.footer__column_links_vcontaktelogo {
   width: 16px;
   height: 16px;
   margin-right: 10px;
   background-size: contain;
   background-position: center;
-  border: 1px solid red;
   align-self: center;
 }
-.footer-column_links__vcontaktetext {
+.footer__column_links_vcontaktetext {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  text-decoration: none;
+  color: white;
 }
-.footer-column_links__instagram {
+.footer__column_links_instagram {
   margin-bottom: 16px;
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
 }
-.footer-column_links__instagramlogo {
+.footer__column_links_instagramlogo {
   width: 16px;
   height: 16px;
   margin-right: 10px;
   background-size: contain;
   background-position: center;
-  border: 1px solid red;
   align-self:center;
 }
-.footer-column_links__instagramtext {
+.footer__column_links_instagramtext {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  text-decoration: none;
+  color: white;
 }
 
 
